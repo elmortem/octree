@@ -51,7 +51,7 @@ This seems to be the standard way that loose octrees are done. I did an experime
 
 **Create an Octree**
 
-```C#
+```csharp
 // Initial size (metres), initial centre position, minimum node size (metres), looseness
 BoundsOctree<DataType> boundsTree = new BoundsOctree<DataType>(15, position, 1, 1.25f);
 // Initial size (metres), initial centre position, minimum node size (metres)
@@ -65,7 +65,7 @@ PointOctree<DataType> pointTree = new PointOctree<DataType>(15, position, 1);
 
 **Add and Remove**
 
-```C#
+```csharp
 boundsTree.Add(myObject, myBounds);
 boundsTree.Remove(myObject);
 
@@ -77,22 +77,22 @@ boundsTree.Remove(myObject);
 
 **Search in the Octree**
 
-```C#
+```csharp
 bool isColliding = boundsTree.IsColliding(bounds);
 ```
 
-```C#
+```csharp
 DataType[] collidingWith = boundsTree.GetColliding(bounds);
 ```
 - Where `DataType` is the type of the octree
 
-```C#
+```csharp
 DataType[] nearby = pointTree.GetNearby(myRay, 4);
 ```
 - Where `myRay` is a `Ray`
 - In this case we're looking for any point within 4m of the closest point on the ray
 
-```C#
+```csharp
 DataType[] nearby = pointTree.GetNearby(myPos, 4);
 ```
 - Where `myPos` is a `Vector3` from `System.Numerics`
@@ -101,12 +101,12 @@ DataType[] nearby = pointTree.GetNearby(myPos, 4);
 
 A pre-initialized list can be used to store the results, which can be useful when executing a large number of queries with potentially large result sets.
 
-```C#
+```csharp
 List<DataType> collidingWith = new List<DataType>();
 boundsTree.GetColliding(collidingWith, bounds);
 ```
 
-```C#
+```csharp
 pointTree.GetNearby(myRay, 4, collidingWith);
 ```
 

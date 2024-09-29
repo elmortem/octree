@@ -13,7 +13,7 @@ using System.Linq;
 using Unity.Mathematics;
 using UnityEngine;
 
-namespace NetOctree
+namespace Octree
 {
     public partial class PointOctree<T>
     {

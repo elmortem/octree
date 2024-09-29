@@ -12,7 +12,7 @@ using System.Collections.Generic;
 using Unity.Mathematics;
 using UnityEngine;
 
-namespace NetOctree
+namespace Octree
 {
 
     /// <summary>
