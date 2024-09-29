@@ -1,0 +1,12 @@
+{
+  "displayName": "Octree",
+  "name": "com.elmortem.octree",
+  "author": "Makar Osokin",
+  "version": "0.0.2",
+  "unity": "2021.3",
+  "description": "Octree for Unity.",
+  "keywords": [
+    "octree"
+  ],
+  "category": "Utility"
+}
